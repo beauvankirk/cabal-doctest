@@ -1,0 +1,79 @@
+resolver: nightly-2018-09-23
+name: snapshot-for-ghc-8.4.3-nightly-2018-09-23
+
+packages:
+# - Cabal-2.4.0.0@rev:0
+- git: https://github.com/haskell/cabal
+  commit: f28e6152ec06a9357b594ddb5382bdd0df7d64fa
+  subdirs:
+    - Cabal
+    - cabal-install
+    # - pretty-show-1.6.16
+# - git: https://github.com/DanielG/cabal-helper.git
+#   commit: fbdc40affeeb41c3aaf357cceab9829a6c00e36b
+# - http-api-data-0.3.8.1@rev:1
+# - cabal-doctest-1.0.6@rev:2
+# - unliftio-0.2.8.0@sha256:5a47f12ffcee837215c67b05abf35dffb792096564a6f81652d75a54668224cd,2250
+# - brittany-0.11.0.0
+- cabal-plan-0.4.0.0
+- pretty-show-1.8.2
+# - syz-0.2.0.0
+
+drop-packages:
+- Cabal
+- cabal-install
+
+# resolver: lts-11.19
+# name: snapshot-for-building-stack-with-ghc-8.2.2
+
+# packages:
+# - Cabal-2.4.0.0@rev:0
+# - cabal-install-2.2.0.0@rev:1
+# - resolv-0.1.1.1@rev:0
+# - infer-license-0.2.0@rev:0
+# - hpack-0.30.0@rev:0
+# - githash-0.1.0.1@rev:0
+# - rio-orphans-0.1.1.0@sha256:15600084c56ef4e1f22ac2091d10fa6ed62f01f531d819c6a5a19492212a76c9
+# - persistent-sqlite-2.8.2@sha256:6874958eb2943c4567c30bc0069ce4868b2813c490402c22bb2e0efa5b4c4c71,3873
+# - yaml-0.10.1.1@rev:0 #for hpack-0.30
+# - tar-conduit-0.3.0@sha256:c220b7a74b986445d08706aed77f17f82807d0133a5f3a760f53d587d20865b2,2928
+# - hackage-security-0.5.3.0@rev:2
+# - http-api-data-0.3.8.1@rev:1
+# - cabal-doctest-1.0.6@rev:2
+# - unliftio-0.2.8.0@sha256:5a47f12ffcee837215c67b05abf35dffb792096564a6f81652d75a54668224cd,2250
+
+# flags:
+#   cabal-install:
+#     # https://github.com/haskell/cabal/issues/4883
+#     native-dns: false
+
+# resolver: lts-8.21 # Inherits GHC version and package set
+# compiler: ghc-8.0.1 # Overwrites GHC version in the resolver, optional
+
+# name: my-snapshot # User-friendly name
+
+# # Additional packages, follows extra-deps syntax
+# packages:
+# - unordered-containers-0.2.7.1
+# - hashable-1.2.4.0
+# - text-1.2.2.1
+
+# # Override flags, can also override flags in the parent snapshot
+# flags:
+#   unordered-containers:
+#     debug: true
+
+# # Packages from the parent snapshot to ignore
+# drop-packages:
+# - wai-extra
+
+# # Packages which should be hidden (affects script command's import
+# # parser
+# hidden:
+#   wai: true
+#   warp: false
+
+# # Set GHC options for specific packages
+# ghc-options:
+#   warp:
+#   - -O2

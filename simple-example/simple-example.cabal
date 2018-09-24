@@ -11,7 +11,7 @@ maintainer:          Oleg Grenrus <oleg.grenrus@iki.fi>
 copyright:           (c) 2017 Oleg Grenrus
 category:            Example
 build-type:          Custom
-cabal-version:       1.12
+cabal-version:       2.0
 
 custom-setup
   setup-depends:

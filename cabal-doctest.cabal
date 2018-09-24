@@ -18,7 +18,7 @@ maintainer:          Oleg Grenrus <oleg.grenrus@iki.fi>
 copyright:           (c) 2017 Oleg Grenrus
 category:            Distribution
 build-type:          Simple
-cabal-version:       >=1.10
+cabal-version:       2.0
 extra-source-files:  ChangeLog.md README.md
 tested-with:
   GHC==7.0.4,
@@ -42,7 +42,7 @@ library
   other-extensions:
   build-depends:
     base >=4.3 && <4.13,
-    Cabal >= 1.10 && <2.5,
+    Cabal >= 1.10 && <2.6,
     filepath,
     directory
   hs-source-dirs:      src
